@@ -41,7 +41,7 @@ function setup() {
 	treeObj=new tree(1050,580);
 	groundObject=new ground(width/2,600,width,20);
   //create launcherObject here
-
+launcherObject=new Launcher(stoneObj.body,{x:235,y:420})
 
 	Engine.run(engine);
 }
@@ -73,8 +73,8 @@ function draw() {
 
   // = new Launcher(stone.body,{x:200,y:100});
   // display launcher object here
- // launcherObject = new launcher (stoneObj.body,{x:235,y:420});
-
+  //launcherObject = new launcher (stoneObj.body,{x:235,y:420});
+  launcherObject.display()
   detectollision(stoneObj,mango1);
   detectollision(stoneObj,mango2);
   detectollision(stoneObj,mango3);
